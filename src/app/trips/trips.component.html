@@ -1,0 +1,49 @@
+<h1 class="text-center myShadow">Explore the world</h1>
+<div class="float-right">
+<form class="form-inline container">
+        <i class="fas fa-search"></i> <input name="searchInput" placeholder="Search" #searchInput="ngModel" [(ngModel)]="searchText">
+</form>
+</div>
+<div class="row clearfloat">
+  <ng-container *ngFor="let hotel of hotelArray">
+    <div *ngIf="filterCondition(hotel)" class="col-12 col-md-6 col-lg-4 my-3" align="center">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{hotel.image}}" alt="brokenURL">
+        <div class="card-body">
+          <h5 class="card-title">{{hotel.name}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{hotel.city}}</h6>
+          <p class="card-text">{{hotel.description}}</p>
+          <div class="text-left">
+          <h3 class="d-inline text-left">{{stringifyStars(hotel.stars)}}</h3>
+          <button class="btn btn-primary float-right" data-toggle="modal" data-target="#myModal">Book</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+ <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Oops</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          Sorry, all rooms are booked here...
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>

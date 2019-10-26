@@ -1,0 +1,49 @@
+<div class="container">
+  <h3 class="text-center">Admin panel <button class="btn btn-outline-warning btn-sm" (click)="toggleKey()"><i class="fas fa-key"></i></button></h3>
+  <form [formGroup]="this.AdminService.form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <div class="mb-3" [class.hide]="isHidden">
+        <label><i class="fas fa-key"></i> $key</label>
+        <input formControlName="$key" class="form-control keyField">
+      </div>
+      <!-- was type="hidden" -->
+      <label><i class="fas fa-hotel"></i> Name</label>
+      <input formControlName="name" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.name.errors}">
+      <div class="invalid-feedback" *ngIf="submitted && formControls.name.errors">This field is required</div>
+    </div>
+    <div class="form-group">
+      <label><i class="fas fa-map-marker-alt"></i> City </label>
+      <!-- here we add the the invalid class based on the same condition for city and the possible error for this city control is due to the invalid city address -->
+      <input formControlName="city" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.city.errors}">
+      <div class="invalid-feedback" *ngIf="submitted && formControls.city.errors">This field is required</div>
+    </div>
+    <div class="form-group">
+      <label><i class="fas fa-star"></i> Stars</label>
+      <input formControlName="stars" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.stars.errors}">
+      <div class="invalid-feedback" *ngIf="submitted && formControls.stars.errors">
+        <label *ngIf="formControls.stars.errors.required">This field is required</label>
+        <label *ngIf="formControls.stars.errors.min">minimum 1 star</label>
+        <label *ngIf="formControls.stars.errors.max">maximum 5 stars</label>
+        <label *ngIf="formControls.stars.errors.pattern">not a number or too many digits</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label><i class="far fa-images"></i> Image</label>
+      <input formControlName="image" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.image.errors}">
+      <div class="invalid-feedback" *ngIf="submitted && formControls.image.errors">This field is required</div>
+    </div>
+    <div class="form-group">
+      <label><i class="fas fa-pencil-alt"></i> Description</label>
+      <textarea formControlName="description" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.description.errors}">''</textarea> <!-- '' so property is sent to DB even if left empty -->
+      <div class="invalid-feedback" *ngIf="submitted && formControls.description.errors">
+        maximum 64 characters
+      </div>
+    </div>
+    <div class="form-group">
+      <input type="submit" class="btn btn-primary" value="Submit">
+    </div>
+  </form>
+  <div class="alert alert-success" *ngIf="showSuccessMessage">
+    submitted successfully.
+  </div>
+</div>

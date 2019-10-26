@@ -1,0 +1,23 @@
+img {
+	width: 90px;
+	height: 60px;
+}
+
+.w-fixed {
+	width: 40px;
+}
+
+.center {
+	margin: 0 auto !important;
+}
+
+input {
+	background: #222;
+	width: 95% !important;
+	color: yellow !important;
+}
+
+input:focus {
+	background: #444;
+	color: yellow !important;
+}

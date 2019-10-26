@@ -1,27 +1,12 @@
 # CodeReview07
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.12.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+PERSONAL NOTES
+// Renamed/re-themed stuff to be more resembling of a real hotel-booking site
+// Added bonus functionality:
+// -DB data gets populated both as preview in admin panel and polished on a different public page
+// -"Stars"/rating:number gets rounded and converted correctly to 5 actual stars
+// -Edit-button automatically scrolls back to the top for more comfort
+// -Validator pattern: specified range of length of decimals (regex)
+// -hidden key-input can be toggled via ng class-binding (click)
+// -Search/Filter takes into account multiple properties

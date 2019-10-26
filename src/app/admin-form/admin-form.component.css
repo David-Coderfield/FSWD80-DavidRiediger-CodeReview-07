@@ -1,0 +1,15 @@
+.hide {
+	display: none;
+}
+
+*:not(.alert-success) {
+	color: #fff !important;
+}
+
+input, textarea {
+	background: #000022;
+}
+
+input:focus, textarea:focus {
+	background: #111144;
+}

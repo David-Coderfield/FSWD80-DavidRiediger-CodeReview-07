@@ -1,0 +1,56 @@
+* {
+	color: white;
+}
+
+.carousel-inner img {
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.carousel-caption {
+	text-shadow: 3px 3px 5px #000;
+}
+
+.fa-leaf {
+	color: green;
+}
+
+h1.card-title{
+	/* text-align: center; */
+	border: 3px solid #fff;
+	padding: 4px 8px;
+	width: 3.9rem;
+	margin: 0 auto 0.5rem;
+	border-radius: 50% 50%;
+
+}
+
+.card {
+	background-color: rgba(0,0,0,0.3);
+	height: 264px;
+	border-bottom-right-radius: 15%;
+
+}
+
+.card:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari prior 9.0 */
+  transform: scale(1.1); /* Standard syntax */
+  -webkit-transition: 1.5s;
+  -transition: 1.5s;
+}
+
+/* LIST */
+.card ul {
+  list-style: none;
+  margin-left: -28px;
+}
+
+.card ul li:before {
+  content: '✓ ';
+  font-weight: bold;
+}
+
+.card a {
+	border-bottom-right-radius: 20px;
+}

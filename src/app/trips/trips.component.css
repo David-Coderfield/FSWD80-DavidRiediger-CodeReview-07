@@ -1,0 +1,45 @@
+.card-text, h1 {
+	font-family: 'Caveat', cursive;
+}
+
+.card h3 {
+	color: gold;
+}
+
+.card a:hover {
+	cursor: pointer;
+} 
+
+img {
+	height: 12rem;
+	object-fit: 
+}
+
+p.card-text {
+	height: 48px;
+	font-size: 1.2rem;
+}
+
+.fa-search {
+	color: #99f;
+	padding-right: 0.5rem;
+}
+
+.clearfloat {
+	clear: both;
+}
+
+input {
+	width: 18rem;
+	max-width: 80%
+}
+
+.myShadow {
+	color: white;
+	text-shadow: 3px 3px 5px #000;
+}
+
+.card {
+	font-family: cursive;
+	/* background-color: rgba(255,255,255,0.75); */
+}
